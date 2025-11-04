@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHaul | The Future of Driver Hiring & Compliance</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Use Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Enable smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Simple transition for mobile menu */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="relative bg-white border-b border-gray-200">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" title="SafeHaul Homepage" class="flex items-center">
+                    <!-- SVG Logo (Placeholder) -->
+                    <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h-9m9 0H21.375a1.125 1.125 0 0 0 1.125-1.125V14.25m-18 0V5.625c0-.621.504-1.125 1.125-1.125h14.25c.621 0 1.125.504 1.125 1.125v8.625m-18 0a1.125 1.125 0 0 0 1.125 1.125h14.25a1.125 1.125 0 0 0 1.125-1.125m-18 0v-7.5A2.25 2.25 0 0 1 5.25 4.5h13.5A2.25 2.25 0 0 1 21 6.75v7.5m-18 0h18" />
+                    </svg>
+                    <span class="ml-2 text-2xl font-bold text-gray-900">SafeHaul</span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="font-medium text-gray-600 hover:text-blue-600">Features</a>
+                    <a href="#how-it-works" class="font-medium text-gray-600 hover:text-blue-600">How It Works</a>
+                    <a href="#pricing" class="font-medium text-gray-600 hover:text-blue-600">Pricing</a>
+                </div>
+
+                <!-- Desktop Nav Buttons (Your Requirement) -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- MODIFIED: Links to your deployed admin portal -->
+                    <a href="https://hr-portal-ebon.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-sm font-semibold text-blue-600 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50">
+                        Login as Carrier
+                    </a>
+                    <!-- MODIFIED: Links to your deployed driver app -->
+                    <a href="https://trucker-app-final.vercel.app/index.html?company=globalmax" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow-sm hover:bg-blue-700">
+                        Apply as a Driver
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-lg transform -translate-y-full -z-10">
+            <div class="px-4 pt-4 pb-6 space-y-4">
+                <a href="#features" class="block font-medium text-gray-600 hover:text-blue-600">Features</a>
+                <a href="#how-it-works" class="block font-medium text-gray-600 hover:text-blue-600">How It Works</a>
+                <a href="#pricing" class="block font-medium text-gray-600 hover:text-blue-600">Pricing</a>
+                <div class="pt-4 border-t border-gray-100 space-y-4">
+                    <!-- MODIFIED: Links to your deployed admin portal -->
+                    <a href="https://hr-portal-ebon.vercel.app/" target="_blank" rel="noopener noreferrer" class="block w-full text-center px-5 py-3 font-semibold text-blue-600 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50">
+                        Login as Carrier
+                    </a>
+                    <!-- MODIFIED: Links to your deployed driver app -->
+                    <a href="https://trucker-app-final.vercel.app/index.html?company=globalmax" target="_blank" rel="noopener noreferrer" class="block w-full text-center px-5 py-3 font-semibold text-white bg-blue-600 rounded-lg shadow-sm hover:bg-blue-700">
+                        Apply as a Driver
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="relative bg-gray-50 overflow-hidden">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <!-- Hero Text -->
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                            Hire Faster.
+                            <br>
+                            <span class="text-blue-600">Stay Compliant.</span>
+                        </h1>
+                        <p class="mt-6 text-lg text-gray-600 max-w-lg mx-auto md:mx-0">
+                            The all-in-one platform for modern trucking carriers. Manage applications, onboard drivers, and master DOT compliance—all in one place.
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#pricing" class="px-8 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700">
+                                Get Started
+                            </a>
+                            <a href="#features" class="px-8 py-3 text-lg font-semibold text-blue-600 bg-white border border-gray-300 rounded-lg shadow-md hover:bg-gray-50">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hero Image -->
+                    <div class="hidden md:block">
+                        <!-- MODIFIED: "Fantasized" UI image -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjE5NjR8MHwxfHNlYXJjaHwxfHxTQUFTJTIwZGFzaGJvYXJkJTJDSEJ8ZW58MHx8fHwxNzMwNzQwMjU1fDA&ixlib=rb-4.0.3&q=80&w=1080" 
+                            alt="Screenshot of the SafeHaul recruiter dashboard showing driver application status and analytics" 
+                            class="rounded-lg shadow-2xl aspect-video object-cover"
+                            onerror="this.src='httpsExamples of such tags include [Image of the human digestive system],  etc. Be very economical in your use of image tags, only add multiple tags if each additional tag is adding instructive value beyond pure illustration. Place the image tag immediately before or after the relevant text without disrupting the flow of the response.://placehold.co/600x400/3B82F6/FFFFFF?text=Dashboard+Preview&font=inter'; this.onerror=null;"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-24 md:py-32">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-sm font-semibold text-blue-600 uppercase">Why SafeHaul?</span>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-gray-900">Everything you need to build your fleet.</h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Stop juggling spreadsheets and paper forms. Our platform brings your entire driver management process online.
+                    </p>
+                </div>
+
+                <!-- Feature Grid -->
+                <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Feature 1 -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600 mx-auto">
+                            <!-- Icon: Smartphone -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18h3m-3-18H9m6.75 0h-1.5" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold">Mobile-First Applications</h3>
+                        <p class="mt-2 text-gray-600">
+                            Drivers can apply in minutes from any device. Our clean, multi-step forms reduce drop-off and get you completed applications.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600 mx-auto">
+                            <!-- Icon: Dashboard -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25Z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold">Recruiter Dashboard</h3>
+                        <p class="mt-2 text-gray-600">
+                            Manage your entire pipeline. Review new applications, request documents, update statuses, and download full PDFs for your records.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600 mx-auto">
+                            <!-- Icon: Shield -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold">DOT Compliance Built-In</h3>
+                        <p class="mt-2 text-gray-600">
+                            Our system is built around DOT regulations. Handle PSP authorizations, Clearinghouse consents, and generate compliant PDF applications automatically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-24 md:py-32 bg-gray-50">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-sm font-semibold text-blue-600 uppercase">Get Started</span>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-gray-900">Up and running in 3 simple steps.</h2>
+                </div>
+
+                <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
+                    <!-- Step 1 -->
+                    <div class="relative">
+                        <div class="text-3xl font-bold text-blue-600">01.</div>
+                        <h3 class="mt-4 text-xl font-bold">Sign Up Your Company</h3>
+                        <p class="mt-2 text-gray-600">
+                            Create your carrier profile in minutes. Add your company name, DOT number, and contact info to get your account set up.
+                        </p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative">
+                        <div class="text-3xl font-bold text-blue-600">02.</div>
+                        <h3 class="mt-4 text-xl font-bold">Get Your Branded Link</h3>
+                        <p class="mt-2 text-gray-600">
+                            We instantly generate a unique application URL (e.g., `apply.safehaul.com/your-company`) branded with your company's name.
+                        </p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative">
+                        <div class="text-3xl font-bold text-blue-600">03.</div>
+                        <h3 class="mt-4 text-xl font-bold">Hire Drivers</h3>
+                        <p class="mt-2 text-gray-600">
+                            Post your link and watch the applications roll in. Log in to your dashboard to review, approve, and manage your new drivers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Drivers Section (Linked from Nav) -->
+        <section id="drivers-section" class="py-24 md:py-32">
+            <div class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Are you a driver?</h2>
+                <p class="mt-4 text-lg text-gray-600">
+                    If a carrier sent you a link to this page, please use **their specific application link** to apply.
+                </p>
+                <p class="mt-4 text-lg text-gray-600">
+                    SafeHaul powers the hiring for hundreds of top carriers. We make it easy for you to apply and for them to hire you faster. If you've already applied, you can check your application status by logging into your driver portal.
+                </p>
+                <div class="mt-10">
+                    <!-- This would link to the driver RECALL portal -->
+                    <a href="./recall.html" class="px-8 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700">
+                        Check Application Status
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-24 md:py-32 bg-gray-50">
+            <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-sm font-semibold text-blue-600 uppercase">Simple Pricing</span>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-gray-900">Built for fleets of all sizes.</h2>
+                </div>
+
+                <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Standard Plan -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                        <h3 class="text-2xl font-bold">Standard</h3>
+                        <p class="mt-2 text-gray-600">For growing fleets and owner-operators.</p>
+                        <p class="mt-6 text-5xl font-extrabold">
+                            $99
+                            <span class="text-xl font-medium text-gray-600">/ mo</span>
+                        </p>
+                        <ul class="mt-8 space-y-3 text-gray-600">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Up to 50 active drivers</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Recruiter Dashboard</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Mobile-Friendly Application</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>DOT Compliance Forms</li>
+                        </ul>
+                        <a href="#" class="mt-10 block w-full text-center px-6 py-3 font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700">
+                            Get Started
+                        </a>
+                    </div>
+                    <!-- Enterprise Plan -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-600 relative">
+                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 px-4 py-1 text-sm font-semibold text-white bg-blue-600 rounded-full">Most Popular</span>
+                        <h3 class="text-2xl font-bold">Enterprise</h3>
+                        <p class="mt-2 text-gray-600">For large fleets and recruiting agencies.</p>
+                        <p class="mt-6 text-5xl font-extrabold">
+                            Custom
+                        </p>
+                        <ul class="mt-8 space-y-3 text-gray-600">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited drivers</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Multi-user Admin Portal</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>MVR & PSP Integrations</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority Support</li>
+                        </ul>
+                        <a href="#" class="mt-10 block w-full text-center px-6 py-3 font-semibold text-blue-600 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50">
+                            Contact Sales
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 md:py-32 bg-blue-600">
+            <div class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Stop the paperwork. Start the engine.</h2>
+                <p class="mt-4 text-lg text-blue-100">
+                    See how SafeHaul can streamline your driver hiring and compliance. Get started today.
+                </p>
+                <div class="mt-10">
+                    <a href="#pricing" class="px-8 py-3 text-lg font-semibold text-blue-600 bg-white rounded-lg shadow-md hover:bg-Gimme a sec-gray-100">
+                        Get Started Today
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left">
+                    <span class="text-lg font-bold text-white">SafeHaul</span>
+                    <p class="mt-1 text-sm">The Future of Driver Hiring & Compliance</p>
+                </div>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#features" class="hover:text-white">Features</a>
+                    <a href="#pricing" class="hover:text-white">Pricing</a>
+                    <!-- MODIFIED: Links to your deployed admin portal -->
+                    <a href="https://hr-portal-ebon.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-white">Carrier Login</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+                <p>&copy; 2025 SafeHaul Technologies Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('-translate-y-full')) {
+                menu.classList.remove('-translate-y-full', '-z-10');
+                menu.classList.add('translate-y-0', 'z-40');
+            } else {
+                menu.classList.remove('translate-y-0', 'z-40');
+                menu.classList.add('-translate-y-full', '-z-10');
+            }
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.remove('translate-y-0', 'z-40');
+                menu.classList.add('-translate-y-full', '-z-10');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
